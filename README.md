@@ -20,3 +20,21 @@ The system follows the communication flow as depicted in the chart below:
 The Producer queues act as bounded buffers, and the Dispatcher queues are unbounded buffers. The Co-Editors' shared queue is also a bounded buffer.
 
 A thread-safe bounded buffer is implemented using a binary semaphore (mutex) and a counting semaphore with two binary semaphores.
+
+## How to run
+
+1. Clone the repository to your local machine.
+2. Compile the program using the provided Makefile: make.
+3. Run the program with the path to the text file as an argument: ./tsync.out path/to/your/input.txt
+
+### Input File Format
+The input file should contain a number of consecutive triples followed by a single number:
+
+* The number of triples represents the number of producers.
+* Each triple consists of:
+  * The ID of the producer.
+  * The number of articles the producer prepares.
+  * The limited queue size of the producer.
+* After all triples, include a single number representing the queue size of the editor.
+
+### An example file is attached: example.txt
