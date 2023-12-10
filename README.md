@@ -18,3 +18,5 @@ The system follows the communication flow as depicted in the chart below:
 ![systemdesign](https://github.com/lidormoryosef/Threads-Synchronization/assets/118112616/fb7f008b-4334-42aa-8c4d-42c28ebc529d)
 
 The Producer queues act as bounded buffers, and the Dispatcher queues are unbounded buffers. The Co-Editors' shared queue is also a bounded buffer.
+
+A thread-safe bounded buffer is implemented using a binary semaphore (mutex) and a counting semaphore with two binary semaphores.
