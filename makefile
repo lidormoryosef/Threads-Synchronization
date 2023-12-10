@@ -1,4 +1,4 @@
 run:
-	gcc */*.c *.c -o ex3.out -pthread
+	gcc */*.c *.c -o tsync.out -pthread
 clean:
 	rm -rf *.out
